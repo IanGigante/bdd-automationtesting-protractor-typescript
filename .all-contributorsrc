@@ -1,0 +1,14 @@
+{
+  "projectName": "exit",
+  "projectOwner": "exit",
+  "repoType": "github",
+  "repoHost": "exit",
+  "files": [
+    "exit"
+  ],
+  "imageSize": null,
+  "commit": false,
+  "commitConvention": "none",
+  "contributors": [],
+  "contributorsPerLine": 7
+}
