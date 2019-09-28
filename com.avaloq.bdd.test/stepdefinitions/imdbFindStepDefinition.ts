@@ -3,7 +3,7 @@ const {Given, When, Then } = require("cucumber");
 
 const imdbFind : imdbFindPage = new imdbFindPage();
 
-Then(/^Total of (-?\d+) entries are displayed for the Movie search on the "(.*?)" section of IMDB Find Page$/, async (resCount : number , resSection : string) => {
+Then(/^Total of (-?\d+) entries are displayed for the Movie search on the "(.*?)" section of IMDB Find Page$/, {timeout: 3 * 5000},async (resCount : number , resSection : string) => {
     await imdbFind.validateCountImdbFindPageMovieSearchTitle(resSection, resCount);
 });
 

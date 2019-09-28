@@ -1,6 +1,6 @@
 import { $$,$, ElementFinder, browser, ElementArrayFinder, element, by } from "protractor";
 import * as chai from 'chai';
-const assert = chai.expect;
+const expect = chai.expect;
 export class imdbFindPage {
 
     /**
@@ -10,9 +10,10 @@ export class imdbFindPage {
      * @param resCount - Expected count of results
      */
     async validateCountImdbFindPageMovieSearchTitle(resSection : string, resCount : number){
-        var x = "//h3[contains(text(),'"+resSection+"')]/following-sibling::table//tr";
-        await assert(element.all(by.xpath(x.toString())).count()).to.eventually.be.equal(resCount);
-    };
+        var loc = "//h3[contains(text(),'"+resSection+"')]/following-sibling::table//tr";
+        var actCount = await element.all(by.xpath(loc)).count();
+        await expect(actCount).to.be.equal(resCount);
+ };
     
    /**
     * This function is used to click a Movie Title from the results on IMDB Find Page
@@ -20,7 +21,7 @@ export class imdbFindPage {
     * @param resSection (i.e Titles)
     */
     async clickImdbsFindPageSearchResultMovie(selMovTitle : string, resSection : string){
-        var x = "//h3[contains(text(),'"+resSection+"')]/following-sibling::table//tr/td[contains(.,'"+selMovTitle+"')]/a";
-        await element(by.xpath(x)).click();
+        var loc = "//h3[contains(text(),'"+resSection+"')]/following-sibling::table//tr/td[contains(.,'"+selMovTitle+"')]/a";
+        await element(by.xpath(loc)).click();
     };
 }

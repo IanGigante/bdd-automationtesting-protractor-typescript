@@ -16,7 +16,7 @@ export const config: Config = {
     },
 
     framework: "custom",
-    frameworkPath: require.resolve("bdd-automation-typescript-protractor"),
+    frameworkPath: require.resolve("protractor-cucumber-framework"),
 
     specs: [
         "../../com.avaloq.bdd.test/features/*.feature",
