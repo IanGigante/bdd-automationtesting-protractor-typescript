@@ -14,9 +14,10 @@ https://nodejs.org/en/download/
 #### Setup Scripts
 1. Create your workspace folder
 2. Inside the workspace folder, clone this repository
-3. Import this project in your text editor
-
+3. Run npm install
 * All the dependencies from package.json and ambient typings would be installed in node_modules folder.
+4. Import this project in your text editor
+
 
 #### Run Scripts
 1. npm run webdriver-update 
